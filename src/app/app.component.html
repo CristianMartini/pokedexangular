@@ -1,11 +1,11 @@
-<nav>
+<nav class="navbar">
   <img [src]="logo" alt="logo pokemon" class="logo" />
   <ul>
     <li
       *ngFor="let link of links"
       [ngClass]="{ link_selecionado: link === 'Pokedex' }"
     >
-      {{ link}}
+      {{ link }}
     </li>
   </ul>
   <img src="{{ imgProfile }}" alt="imagemde perfil" class="imgProfile" />
@@ -114,34 +114,34 @@
         <p class="info">Evolução: {{ selectedPokemon.evolution }}</p>
       </div>
     </div>
-    <div class="modal-info">
-      <ul>
-        <li>Ataques: {{ selectedPokemon.attacks.join(", ") }}</li>
-        <ul>
-          <li>Nível: {{ selectedPokemon.level }}</li>
+    <div id="modal__info">
+      <ul class="modal__info-ul">
+        <li class="modal__info-li">Ataques: {{ selectedPokemon.attacks.join(", ") }}</li>
+        <ul class="modal__info-ul">
+          <li class="modal__info-li">Nível: {{ selectedPokemon.level }}</li>
         </ul>
-        <li>Pontos Acumulados: {{ selectedPokemon.experiencePoints }}</li>
-        <li>Gênero: {{ selectedPokemon.gender }}</li>
-        <li>Dificuldade de Captura: {{ selectedPokemon.captureDifficulty }}</li>
-        <ul>
-          <li>Descrição: {{ selectedPokemon.description }}</li>
+        <li class="modal__info-li">Pontos Acumulados: {{ selectedPokemon.experiencePoints }}</li>
+        <li class="modal__info-li">Gênero: {{ selectedPokemon.gender }}</li>
+        <li class="modal__info-li">Dificuldade de Captura: {{ selectedPokemon.captureDifficulty }}</li>
+        <ul class="modal__info-ul">
+          <li class="modal__info-li">Descrição: {{ selectedPokemon.description }}</li>
         </ul>
-        <li>Dimensões: {{ selectedPokemon.dimensions }}</li>
-        <li>Região: {{ selectedPokemon.region }}</li>
-        <li>Saúde: {{ selectedPokemon.health }}</li>
-        <li>Ataque Físico: {{ selectedPokemon.physicalAttack }}</li>
-        <li>Defesa Física: {{ selectedPokemon.physicalDefense }}</li>
-        <li>Ataque Especial: {{ selectedPokemon.specialAttack }}</li>
-        <li>Defesa Especial: {{ selectedPokemon.specialDefense }}</li>
-        <li>Rapidez: {{ selectedPokemon.speed }}</li>
-        <li>
+        <li class="modal__info-li">Dimensões: {{ selectedPokemon.dimensions }}</li>
+        <li class="modal__info-li">Região: {{ selectedPokemon.region }}</li>
+        <li class="modal__info-li">Saúde: {{ selectedPokemon.health }}</li>
+        <li class="modal__info-li">Ataque Físico: {{ selectedPokemon.physicalAttack }}</li>
+        <li class="modal__info-li">Defesa Física: {{ selectedPokemon.physicalDefense }}</li>
+        <li class="modal__info-li">Ataque Especial: {{ selectedPokemon.specialAttack }}</li>
+        <li class="modal__info-li">Defesa Especial: {{ selectedPokemon.specialDefense }}</li>
+        <li class="modal__info-li">Rapidez: {{ selectedPokemon.speed }}</li>
+        <li class="modal__info-li">
           Habilidades Especiais:
           {{ selectedPokemon.specialAbilities.join(", ") }}
-        </li><div class="button-wrap">
+        </li>
+      </ul>
+        <div class="button-wrap">
         <button class="glow-on-hover" type="button"(click)="fecharModal()">Fechar</button>
       </div>
-      </ul>
-      
+    </div>
     </div>
   </div>
-</div>

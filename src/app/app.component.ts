@@ -8,12 +8,12 @@ import { Pokemon } from 'src/modules/pokemon';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Myproject';
-  mensagem="POKEDEX"
-  logo= "../assets/logo.png";
-  imgProfile:string="../assets/photoPerfil.jpg";
-  links: string[]= ['Home','Pokedex','Video Game','Card Games','Eventos'];
-
+    title = 'Myproject';
+    mensagem="POKEDEX"
+    logo= "../assets/logo.png";
+    imgProfile:string="../assets/photoPerfil.jpg";
+    links: string[]= ['Home','Pokedex','Video Game','Card Games','Eventos'];
+  
 
   
  Pokemons:Pokemon []=[
