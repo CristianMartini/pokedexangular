@@ -1,0 +1,147 @@
+<nav>
+  <img [src]="logo" alt="logo pokemon" class="logo" />
+  <ul>
+    <li
+      *ngFor="let link of links"
+      [ngClass]="{ link_selecionado: link === 'Pokedex' }"
+    >
+      {{ link}}
+    </li>
+  </ul>
+  <img src="{{ imgProfile }}" alt="imagemde perfil" class="imgProfile" />
+</nav>
+
+<h1>{{ mensagem }}</h1>
+<div class="search">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="40"
+    viewBox="0 -960 960 960"
+    width="24"
+  >
+    <path
+      d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.552.5T200-580q0 75 52.127.5T380-400Z"
+      fill="#3764d3"
+    />
+  </svg>
+  <input
+    class="inputPrincipal"
+    type="text"
+    placeholder="Pesquisar por nome..."
+  />
+  <button class="btn_search">Search</button>
+</div>
+<main>
+  <form>
+    <select name="tipoPokemon" id="tipo">
+      <option value="tipo">Tipo</option>
+      <option value="agua">Água</option>
+      <option value="fogo">Fogo</option>
+      <option value="eletrico">Eletrico</option>
+      <option value="grama">Grama</option>
+      <option value="pedra">Pedra</option>
+    </select>
+    <select name="habilidades" id="Habilidades">
+      <option value="habilidades">Habilidades</option>
+      <option value="overgrow">Overgrow</option>
+      <option value="blaze">Blaze</option>
+      <option value="torrent">Torrent</option>
+    </select>
+    <div>
+      <h3>Altura:</h3>
+      <label>
+        <input type="checkbox" name="pequeno" value="pequeno" />Pequeno
+      </label>
+      <label>
+        <input type="checkbox" name="pequeno" value="medio" />Médio
+      </label>
+      <label>
+        <input type="checkbox" name="pequeno" value="grande" />Grande
+      </label>
+    </div>
+    <div>
+      <h3>Largura</h3>
+      <label>
+        <input type="checkbox" name="pequeno" value="pequeno" />Pequeno
+      </label>
+      <label>
+        <input type="checkbox" name="pequeno" value="medio" />Médio
+      </label>
+      <label>
+        <input type="checkbox" name="pequeno" value="grande" />Grande
+      </label>
+    </div>
+  </form>
+  <div id="pokemon-container">
+    <div
+      class="pokemon-card"
+      *ngFor="let pokemon of Pokemons"
+      (click)="mostrarDetalhes(pokemon)"
+    >
+      <div class="pokemon-card__image">
+        <img src="{{ pokemon.image }}" alt="Pokemon Image" />
+      </div>
+
+      <div class="pokemon-card__number">Nº {{ pokemon.id }}</div>
+
+      <div class="pokemon-card__name">
+        {{ pokemon.name }}
+      </div>
+
+      <div class="pokemon-card__types">
+        <div
+          class="pokemon-card__type"
+          *ngFor="let type of pokemon.types"
+          [class]="'pokemon-card__type--' + type.toLowerCase()"
+        >
+          {{ type }}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div *ngIf="selectedPokemon" class="modal">
+  <img src="https://i0.wp.com/imagensemoldes.com.br/wp-content/uploads/2020/04/Logo-Pokebola-Pok%C3%A9mon-PNG.png?fit=512%2C512&ssl=1" alt="" srcset="">
+  <div class="content-container">
+    <div class="modal-pokemon">
+      <div class="pokemon-name">
+        {{ selectedPokemon.name }}
+        <img class="photoPokemon" src="{{ selectedPokemon.image }}" />
+        <p class="pokemon-modal__types">
+          Tipo: {{ selectedPokemon.types.join(", ") }}
+        </p>
+        <p class="info">Evolução: {{ selectedPokemon.evolution }}</p>
+      </div>
+    </div>
+    <div class="modal-info">
+      <ul>
+        <li>Ataques: {{ selectedPokemon.attacks.join(", ") }}</li>
+        <ul>
+          <li>Nível: {{ selectedPokemon.level }}</li>
+        </ul>
+        <li>Pontos Acumulados: {{ selectedPokemon.experiencePoints }}</li>
+        <li>Gênero: {{ selectedPokemon.gender }}</li>
+        <li>Dificuldade de Captura: {{ selectedPokemon.captureDifficulty }}</li>
+        <ul>
+          <li>Descrição: {{ selectedPokemon.description }}</li>
+        </ul>
+        <li>Dimensões: {{ selectedPokemon.dimensions }}</li>
+        <li>Região: {{ selectedPokemon.region }}</li>
+        <li>Saúde: {{ selectedPokemon.health }}</li>
+        <li>Ataque Físico: {{ selectedPokemon.physicalAttack }}</li>
+        <li>Defesa Física: {{ selectedPokemon.physicalDefense }}</li>
+        <li>Ataque Especial: {{ selectedPokemon.specialAttack }}</li>
+        <li>Defesa Especial: {{ selectedPokemon.specialDefense }}</li>
+        <li>Rapidez: {{ selectedPokemon.speed }}</li>
+        <li>
+          Habilidades Especiais:
+          {{ selectedPokemon.specialAbilities.join(", ") }}
+        </li><div class="button-wrap">
+        <button class="glow-on-hover" type="button"(click)="fecharModal()">Fechar</button>
+      </div>
+      </ul>
+      
+    </div>
+  </div>
+</div>

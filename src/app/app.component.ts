@@ -1,0 +1,421 @@
+import { Component } from '@angular/core';
+import { Pokemon } from 'src/modules/pokemon';
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Myproject';
+  mensagem="POKEDEX"
+  logo= "../assets/logo.png";
+  imgProfile:string="../assets/photoPerfil.jpg";
+  links: string[]= ['Home','Pokedex','Video Game','Card Games','Eventos'];
+
+
+  
+ Pokemons:Pokemon []=[
+
+  new Pokemon(
+      1,
+      'Bulbasaur',
+      ['Planta', 'Venenoso'],
+      100,
+      32,
+      28,
+      45,
+      35,
+      55,
+      ['Grande Cura'],
+      'Ivysaur',
+      ['Chicote de Vinha', 'Raio Solar'],
+      14,
+      480,
+      'Feminino',
+      'Média',
+      'Pokémon Semente',
+      'Altura: 0,7m, Peso: 6,9kg',
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
+      'Kanto',
+  ),
+  
+
+  new Pokemon(
+      2,
+      'Ivysaur',
+      ['Planta', 'Venenoso'],
+      100,
+      32,
+      28,
+      45,
+      35,
+      55,
+      ['Grande Cura'],
+      'Venusaur',
+      ['Chicote de Vinha', 'Raio Solar'],
+      14,
+      480,
+      'Feminino',
+      'Média',
+      'Pokémon Semente',
+      'Altura: 0,7m, Peso: 6,9kg',
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png',
+      'Kanto',
+  ),
+  
+ 
+  new Pokemon(
+      3,
+      'Venusaur',
+      ['Planta', 'Venenoso'],
+      100,
+      32,
+      28,
+      45,
+      35,
+      55,
+      ['Grande Cura'],
+      'Charmander',
+      ['Lança-chamas', 'Garra de Fogo'],
+      14,
+      480,
+      'Masculino',
+      'Pequeno',
+      'Pokémon Lagarto',
+      'Altura: 0,6m, Peso: 8,5kg',
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
+      'Kanto',
+  ),
+
+  new Pokemon(
+      4,
+      'Charmander',
+      ['Fogo'],
+      100,
+      32,
+      28,
+      45,
+      35,
+      55,
+      ['Chama do Dragão'],
+      'Charmeleon',
+      ['Lança-chamas', 'Garra de Fogo'],
+      14,
+      480,
+      'Masculino',
+      'Pequeno',
+      'Pokémon Lagarto',
+      'Altura: 0,6m, Peso: 8,5kg',
+      'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
+      'Kanto',
+  ),
+
+new Pokemon(
+    5,
+    'Charmeleon',
+    ['Fogo'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Chama do Dragão'],
+    'Charizard',
+    ['Lança-chamas', 'Garra de Fogo'],
+    14,
+    480,
+    'Masculino',
+    'Grande',
+    'Pokémon Chama',
+    'Altura: 1,7m, Peso: 90,5kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png',
+    'Kanto',
+),
+
+
+new Pokemon(
+    6,
+    'Charizard',
+    ['Fogo', 'Voador'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Chama do Dragão'],
+    '',
+    ['Jato de Água', 'Bolha'],
+    14,
+    480,
+    'Masculino',
+    'Pequeno',
+    'Pokémon Tartaruga',
+    'Altura: 0,5m, Peso: 9kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
+    'Kanto',
+),
+
+
+new Pokemon(
+    7,
+    'Squirtle',
+    ['Água'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Jato de Água'],
+    'Wartortle',
+    ['Jato de Água', 'Hidro Bomba'],
+    14,
+    480,
+    'Masculino',
+    'Médio',
+    'Pokémon Tartaruga',
+    'Altura: 1m, Peso: 22,5kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png',
+    'Kanto',
+),
+
+new Pokemon(
+    8,
+    'Wartortle',
+    ['Água'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Jato de Água'],
+    'Blastoise',
+    ['Jato de Água', 'Hidro Bomba'],
+    14,
+    480,
+    'Masculino',
+    'Médio',
+    'Pokémon Tartaruga',
+    'Altura: 1,6m, Peso: 85,5kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png',
+    'Kanto',
+),
+
+
+new Pokemon(
+    9,
+    'Blastoise',
+    ['Água'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Jato de Água'],
+    '',
+    ['Tackle', 'String Shot'],
+    14,
+    480,
+    'Masculino',
+    'Pequeno',
+    'Pokémon Larva',
+    'Altura: 0,3m, Peso: 2,9kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png',
+    'Kanto',
+),
+
+
+new Pokemon(
+    10,
+    'Caterpie',
+    ['Inseto'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Tackle'],
+    'Metapod',
+    ['Harden', 'String Shot'],
+    14,
+    480,
+    'Masculino',
+    'Pequeno',
+    'Pokémon Casulo',
+    'Altura: 0,7m, Peso: 9,9kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png',
+    'Kanto',
+),
+
+new Pokemon(
+    11,
+    'Metapod',
+    ['Inseto'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Harden'],
+    'Butterfree',
+    ['Confusão', 'Vento Prateado'],
+    14,
+    480,
+    'Masculino',
+    'Médio',
+    'Pokémon Borboleta',
+    'Altura: 1,1m, Peso: 32kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/011.png',
+    'Kanto',
+),
+
+
+new Pokemon(
+    12,
+    'Butterfree',
+    ['Inseto', 'Voador'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Confusão'],
+    '',
+    ['Poison Sting', 'String Shot'],
+    14,
+    480,
+    'Feminino',
+    'Pequeno',
+    'Pokémon Larva',
+    'Altura: 0,3m, Peso: 3,2kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png',
+    'Kanto',
+),
+
+new Pokemon(
+    13,
+    'Weedle',
+    ['Inseto', 'Venenoso'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Poison Sting'],
+    'Kakuna',
+    ['Harden', 'String Shot'],
+    14,
+    480,
+    'Feminino',
+    'Pequeno',
+    'Pokémon Casulo',
+    'Altura: 0,6m, Peso: 10kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/013.png',
+    'Kanto',
+),
+
+new Pokemon(
+    14,
+    'Kakuna',
+    ['Inseto', 'Venenoso'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Harden'],
+    'Beedrill',
+    ['Furacão', 'Twineedle'],
+    14,
+    480,
+    'Feminino',
+    'Pequeno',
+    'Pokémon Ferrão',
+    'Altura: 1,0m, Peso: 29,5kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/014.png',
+    'Kanto',
+),
+
+
+new Pokemon(
+    15,
+    'Beedrill',
+    ['Inseto', 'Venenoso'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Furacão'],
+    '',
+    ['Ataque de Areia', 'Tornado'],
+    14,
+    480,
+    'Masculino',
+    'Pequeno',
+    'Pokémon Passarinho',
+    'Altura: 0,3m, Peso: 1,8kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/015.png',
+    'Kanto',
+),
+
+
+new Pokemon(
+    16,
+    'Pidgey',
+    ['Normal', 'Voador'],
+    100,
+    32,
+    28,
+    45,
+    35,
+    55,
+    ['Ataque de Areia'],
+    'Pidgeotto',
+    ['Ataque de Vento', 'Tornado'],
+    14,
+    480,
+    'Masculino',
+    'Pequeno',
+    'Pokémon Passarinho',
+    'Altura: 0,3m, Peso: 1,8kg',
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png',
+    'Kanto',
+),
+
+
+
+
+
+
+
+
+ 
+
+  
+   
+    
+ ];
+ //mostra detalhes dos pokemos
+ selectedPokemon?: Pokemon;
+mostrarDetalhes(pokemon:Pokemon){
+  this.selectedPokemon = pokemon;
+}
+//fecha o modal
+fecharModal(){
+  this.selectedPokemon = undefined
+}
+
+}
