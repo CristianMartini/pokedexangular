@@ -1,8 +1,8 @@
 # Myproject Pokedex em angular
 
-![Captura de tela 2023-10-05 202024](https://github.com/CristianMartini/pokedexangular/assets/112283155/eeb794d9-ebbb-4062-86d5-b5a318b8b818)
+![Captura de tela 2023-10-05 202024](https://github.com/CristianMartini/pokedexangular/assets/112283155/b3f129c0-c36d-4a77-b7f8-583efc1b5f54)
 
 # Modal com info do Pokemon
 
 
-![Captura de tela 2023-10-05 202117](https://github.com/CristianMartini/pokedexangular/assets/112283155/d8ce4c9e-89db-4d1b-883d-27d4a4f396c7)
+![Captura de tela 2023-10-05 202117](https://github.com/CristianMartini/pokedexangular/assets/112283155/37317d8d-18fe-4eec-980b-b4ffec0e6260)
